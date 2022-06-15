@@ -39,6 +39,7 @@ public final class FeatureManager {
     public void initializeFeatures () {
         this.pluginFeaturesArrayList.add(new PluginFeature("Break Spawners", true));
         this.pluginFeaturesArrayList.add(new PluginFeature("Change Spawners", true));
+        this.pluginFeaturesArrayList.add(new PluginFeature("Craft Spawn Eggs", true));
         this.pluginFeaturesArrayList.add(new PluginFeature("Chunk Loader", true));
         this.pluginFeaturesArrayList.add(new PluginFeature("Timber", true));
     }
