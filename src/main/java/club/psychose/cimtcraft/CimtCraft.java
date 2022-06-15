@@ -17,8 +17,10 @@
 
 package club.psychose.cimtcraft;
 
+import club.psychose.cimtcraft.core.plugin.listeners.BlockBreakEventListener;
 import club.psychose.cimtcraft.utils.Constants;
 import club.psychose.cimtcraft.utils.logging.ConsoleLogger;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -42,6 +44,9 @@ public final class CimtCraft extends JavaPlugin {
         ConsoleLogger.debug("Initialize plugin features...");
         Constants.FEATURE_MANAGER.initializeFeatures();
         ConsoleLogger.debug("Plugin features initialized!");
+        ConsoleLogger.debug("Register listeners...");
+        Bukkit.getPluginManager().registerEvents(new BlockBreakEventListener(), this);
+        ConsoleLogger.debug("Listeners registered!");
     }
 
     @Override
