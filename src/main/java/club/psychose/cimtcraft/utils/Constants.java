@@ -18,6 +18,7 @@
 package club.psychose.cimtcraft.utils;
 
 import club.psychose.cimtcraft.CimtCraft;
+import club.psychose.cimtcraft.core.system.managers.CraftingRecipesManager;
 import club.psychose.cimtcraft.core.system.managers.FeatureManager;
 
 import java.nio.file.Path;
@@ -44,6 +45,7 @@ public final class Constants {
     /**
      * <p>The managers are initialized here because they can't be finalized in the main class.</p>
      */
+    public static final CraftingRecipesManager CRAFTING_RECIPES_MANAGER = new CraftingRecipesManager();
     public static final FeatureManager FEATURE_MANAGER = new FeatureManager();
 
     /**
