@@ -18,6 +18,7 @@
 package club.psychose.cimtcraft.core.system.managers;
 
 import club.psychose.cimtcraft.core.plugin.features.PluginFeature;
+import club.psychose.cimtcraft.core.plugin.features.modules.TimberModule;
 
 import java.util.ArrayList;
 
@@ -39,9 +40,18 @@ public final class FeatureManager {
     public void initializeFeatures () {
         this.pluginFeaturesArrayList.add(new PluginFeature("Break Spawners", true));
         this.pluginFeaturesArrayList.add(new PluginFeature("Change Spawners", true));
-        this.pluginFeaturesArrayList.add(new PluginFeature("Craft Spawn Eggs", true));
         this.pluginFeaturesArrayList.add(new PluginFeature("Chunk Loader", true));
-        this.pluginFeaturesArrayList.add(new PluginFeature("Timber", true));
+        this.pluginFeaturesArrayList.add(new PluginFeature("Custom crafting recipes", true));
+        this.pluginFeaturesArrayList.add(new PluginFeature("Craft Spawn Eggs", true));
+        this.pluginFeaturesArrayList.add(new TimberModule());
+    }
+
+    /**
+     * <p>Here we'll return the ArrayList that stores all registered {@link PluginFeature}.</p>
+     * @return Registered {@link PluginFeature}
+     */
+    public ArrayList<PluginFeature> getPluginFeaturesArrayList () {
+        return this.pluginFeaturesArrayList;
     }
 
     /**
@@ -54,10 +64,11 @@ public final class FeatureManager {
     }
 
     /**
-     * <p>Here we'll return the ArrayList that stores all registered {@link PluginFeature}</p>
-     * @return Registered {@link PluginFeature}
+     * <p>Returns the {@link PluginFeature} via the name.</p>
+     * @param featureName Name of the feature that will be checked.
+     * @return {@link PluginFeature}
      */
-    public ArrayList<PluginFeature> getPluginFeaturesArrayList () {
-        return this.pluginFeaturesArrayList;
+    public PluginFeature getPluginFeatureViaName (String featureName) {
+        return this.getPluginFeaturesArrayList().stream().filter(pluginFeature -> pluginFeature.getFeatureName().equals(featureName)).findFirst().orElse(null);
     }
 }
