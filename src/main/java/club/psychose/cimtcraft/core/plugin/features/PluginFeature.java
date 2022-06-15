@@ -17,13 +17,15 @@
 
 package club.psychose.cimtcraft.core.plugin.features;
 
+import org.bukkit.event.block.BlockBreakEvent;
+
 /**
  * <p>The PluginFeature class defines a feature that offers the plugin.</p>
  * <p>It'll register all features in {@link club.psychose.cimtcraft.core.system.managers.FeatureManager}</p>
  * @author CrashedLife
  */
 
-public final class PluginFeature {
+public class PluginFeature {
     /**
      * <p>Defines the feature variables.</p>
      */
@@ -39,6 +41,12 @@ public final class PluginFeature {
         this.featureName = featureName;
         this.enabled = enabled;
     }
+
+    /**
+     * <p>Passes the BlockBreakEvent parameter when the feature is called.</p>
+     * @param blockBreakEvent The event
+     */
+    public void onBlockBreakEvent (BlockBreakEvent blockBreakEvent) {}
 
     /**
      * <p>Sets the enabled status.</p>
