@@ -18,6 +18,7 @@
 package club.psychose.cimtcraft.core.system.managers;
 
 import club.psychose.cimtcraft.core.plugin.features.PluginFeature;
+import club.psychose.cimtcraft.core.plugin.features.modules.BreakSpawnersModule;
 import club.psychose.cimtcraft.core.plugin.features.modules.TimberModule;
 
 import java.util.ArrayList;
@@ -38,12 +39,12 @@ public final class FeatureManager {
      * <p>This method initialize the hardcoded {@link PluginFeature}.</p>
      */
     public void initializeFeatures () {
-        this.pluginFeaturesArrayList.add(new PluginFeature("Break Spawners", true));
-        this.pluginFeaturesArrayList.add(new PluginFeature("Change Spawners", true));
+        this.pluginFeaturesArrayList.add(new BreakSpawnersModule());
+        this.pluginFeaturesArrayList.add(new TimberModule());
+
         this.pluginFeaturesArrayList.add(new PluginFeature("Chunk Loader", true));
         this.pluginFeaturesArrayList.add(new PluginFeature("Custom crafting recipes", true));
         this.pluginFeaturesArrayList.add(new PluginFeature("Craft Spawn Eggs", true));
-        this.pluginFeaturesArrayList.add(new TimberModule());
     }
 
     /**
