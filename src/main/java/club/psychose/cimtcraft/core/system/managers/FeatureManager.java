@@ -42,7 +42,6 @@ public final class FeatureManager {
         this.pluginFeaturesArrayList.add(new BreakSpawnersModule());
         this.pluginFeaturesArrayList.add(new TimberModule());
 
-        this.pluginFeaturesArrayList.add(new PluginFeature("Chunk Loader", true));
         this.pluginFeaturesArrayList.add(new PluginFeature("Custom crafting recipes", true));
         this.pluginFeaturesArrayList.add(new PluginFeature("Craft Spawn Eggs", true));
     }
