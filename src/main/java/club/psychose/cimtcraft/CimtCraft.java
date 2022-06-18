@@ -42,13 +42,13 @@ public final class CimtCraft extends JavaPlugin {
         ConsoleLogger.debug("Version: " + Constants.VERSION);
         ConsoleLogger.debug("Build Version: " + Constants.BUILD);
         ConsoleLogger.printEmptyLine();
-        ConsoleLogger.debug("Initialize crafting recipes...");
-        Constants.CRAFTING_RECIPES_MANAGER.initializeRecipes();
-        ConsoleLogger.debug("Crafting recipes initialized!");
-        ConsoleLogger.printEmptyLine();
         ConsoleLogger.debug("Initialize plugin features...");
         Constants.FEATURE_MANAGER.initializeFeatures();
         ConsoleLogger.debug("Plugin features initialized!");
+        ConsoleLogger.printEmptyLine();
+        ConsoleLogger.debug("Initialize crafting recipes...");
+        Constants.CRAFTING_RECIPES_MANAGER.initializeRecipes();
+        ConsoleLogger.debug("Crafting recipes initialized!");
         ConsoleLogger.printEmptyLine();
         ConsoleLogger.debug("Register listeners...");
         Bukkit.getPluginManager().registerEvents(new BlockBreakEventListener(), this);
