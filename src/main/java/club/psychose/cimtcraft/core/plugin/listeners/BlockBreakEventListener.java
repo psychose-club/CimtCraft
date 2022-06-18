@@ -36,6 +36,10 @@ public final class BlockBreakEventListener implements Listener {
      */
     @EventHandler
     public void onBlockBreak (BlockBreakEvent blockBreakEvent) {
+        // Checks if the Break Spawners module is enabled.
+        if (Constants.FEATURE_MANAGER.isFeatureEnabled("Break Spawners"))
+            Constants.FEATURE_MANAGER.getPluginFeatureViaName("Break Spawners").onBlockBreakEvent(blockBreakEvent);
+
         // Checks if the Timber module is enabled.
         if (Constants.FEATURE_MANAGER.isFeatureEnabled("Timber"))
             Constants.FEATURE_MANAGER.getPluginFeatureViaName("Timber").onBlockBreakEvent(blockBreakEvent);
