@@ -18,6 +18,7 @@
 package club.psychose.cimtcraft.core.plugin.features;
 
 import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
 
 /**
  * <p>The PluginFeature class defines a feature that offers the plugin.</p>
@@ -47,6 +48,12 @@ public class PluginFeature {
      * @param blockBreakEvent The event
      */
     public void onBlockBreakEvent (BlockBreakEvent blockBreakEvent) {}
+
+    /**
+     * <p>Passes the BlockPlaceEvent parameter when the feature is called.</p>
+     * @param blockPlaceEvent The event
+     */
+    public void onBlockPlaceEvent (BlockPlaceEvent blockPlaceEvent) {}
 
     /**
      * <p>Sets the enabled status.</p>
