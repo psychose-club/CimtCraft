@@ -36,9 +36,9 @@ public final class HuskSpawnEggRecipe extends CraftingRecipe {
         shapedRecipe.shape("WWW", "XYX", "ZZZ");
 
         shapedRecipe.setIngredient('W', Material.SAND);
-        shapedRecipe.setIngredient('X', Material.DEAD_BUSH);
+        shapedRecipe.setIngredient('X', Material.ZOMBIE_SPAWN_EGG);
         shapedRecipe.setIngredient('Y', Material.HEART_OF_THE_SEA);
-        shapedRecipe.setIngredient('Z', Material.ZOMBIE_SPAWN_EGG);
+        shapedRecipe.setIngredient('Z', Material.DEAD_BUSH);
 
         return shapedRecipe;
     }

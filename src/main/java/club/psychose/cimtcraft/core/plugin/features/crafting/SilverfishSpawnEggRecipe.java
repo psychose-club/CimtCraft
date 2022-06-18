@@ -35,7 +35,7 @@ public final class SilverfishSpawnEggRecipe extends CraftingRecipe {
         ShapedRecipe shapedRecipe = new ShapedRecipe(new NamespacedKey(CimtCraft.getPlugin(CimtCraft.class), "crafting_silverfish_spawn_egg"), new ItemStack(Material.SILVERFISH_SPAWN_EGG));
         shapedRecipe.shape("XXX", "XYX", "XXX");
 
-        shapedRecipe.setIngredient('X', Material.INFESTED_COBBLESTONE);
+        shapedRecipe.setIngredient('X', Material.INFESTED_STONE);
         shapedRecipe.setIngredient('Y', Material.HEART_OF_THE_SEA);
 
         return shapedRecipe;

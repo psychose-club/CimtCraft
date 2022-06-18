@@ -33,9 +33,10 @@ public final class ZombieVillagerSpawnEggRecipe extends CraftingRecipe {
     @Override
     public ShapedRecipe getCraftingRecipe() {
         ShapedRecipe shapedRecipe = new ShapedRecipe(new NamespacedKey(CimtCraft.getPlugin(CimtCraft.class), "crafting_zombie_villager_spawn_egg"), new ItemStack(Material.ZOMBIE_VILLAGER_SPAWN_EGG));
-        shapedRecipe.shape("XXX", "ZYZ", "XXX");
+        shapedRecipe.shape("WWW", "ZYX", "WWW");
 
-        shapedRecipe.setIngredient('X', Material.EMERALD);
+        shapedRecipe.setIngredient('W', Material.EMERALD);
+        shapedRecipe.setIngredient('X', Material.ZOMBIE_SPAWN_EGG);
         shapedRecipe.setIngredient('Y', Material.HEART_OF_THE_SEA);
         shapedRecipe.setIngredient('Z', Material.VILLAGER_SPAWN_EGG);
 

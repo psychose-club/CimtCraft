@@ -33,7 +33,7 @@ public final class ZoglinSpawnEggRecipe extends CraftingRecipe {
     @Override
     public ShapedRecipe getCraftingRecipe() {
         ShapedRecipe shapedRecipe = new ShapedRecipe(new NamespacedKey(CimtCraft.getPlugin(CimtCraft.class), "crafting_zoglin_spawn_egg"), new ItemStack(Material.ZOGLIN_SPAWN_EGG));
-        shapedRecipe.shape("XXX", "XYX", "ZZZ");
+        shapedRecipe.shape("XXX", "ZYZ", "XXX");
 
         shapedRecipe.setIngredient('X', Material.BONE);
         shapedRecipe.setIngredient('Y', Material.HEART_OF_THE_SEA);

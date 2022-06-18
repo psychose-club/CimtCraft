@@ -35,7 +35,7 @@ public final class GlowSquidSpawnEggRecipe extends CraftingRecipe {
         ShapedRecipe shapedRecipe = new ShapedRecipe(new NamespacedKey(CimtCraft.getPlugin(CimtCraft.class), "crafting_glow_squid_spawn_egg"), new ItemStack(Material.GLOW_SQUID_SPAWN_EGG));
         shapedRecipe.shape("XXX", "XYX", "XXX");
 
-        shapedRecipe.setIngredient('X', Material.GLOW_SQUID_SPAWN_EGG);
+        shapedRecipe.setIngredient('X', Material.GLOW_INK_SAC);
         shapedRecipe.setIngredient('Y', Material.HEART_OF_THE_SEA);
 
         return shapedRecipe;
