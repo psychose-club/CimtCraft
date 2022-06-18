@@ -114,6 +114,18 @@ public final class CraftingRecipesManager {
             this.craftingRecipesArrayList.add(new ZombieVillagerSpawnEggRecipe().getCraftingRecipe());
             this.craftingRecipesArrayList.add(new ZombifiedPiglinSpawnEggRecipe().getCraftingRecipe());
         }
+
+        // Saddle.
+        if (Constants.FEATURE_MANAGER.isFeatureEnabled("Craft Saddle")) {
+            this.craftingRecipesArrayList.add(new SaddleRecipe().getCraftingRecipe());
+        }
+
+        // Horse Armor.
+        if (Constants.FEATURE_MANAGER.isFeatureEnabled("Craft Horse Armor")) {
+            this.craftingRecipesArrayList.add(new IronHorseArmorRecipe().getCraftingRecipe());
+            this.craftingRecipesArrayList.add(new GoldHorseArmorRecipe().getCraftingRecipe());
+            this.craftingRecipesArrayList.add(new DiamondHorseArmorRecipe().getCraftingRecipe());
+        }
     }
 
     /**
