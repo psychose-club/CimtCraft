@@ -60,6 +60,7 @@ public final class CraftingRecipesManager {
             this.craftingRecipesArrayList.add(new DrownedSpawnEggRecipe().getCraftingRecipe());
             this.craftingRecipesArrayList.add(new ElderGuardianSpawnEggRecipe().getCraftingRecipe());
             this.craftingRecipesArrayList.add(new EndermanSpawnEggRecipe().getCraftingRecipe());
+            this.craftingRecipesArrayList.add(new EndermiteSpawnEggRecipe().getCraftingRecipe());
             this.craftingRecipesArrayList.add(new EvokerSpawnEggRecipe().getCraftingRecipe());
             this.craftingRecipesArrayList.add(new FoxSpawnEggRecipe().getCraftingRecipe());
             this.craftingRecipesArrayList.add(new FrogSpawnEggRecipe().getCraftingRecipe());
@@ -68,6 +69,7 @@ public final class CraftingRecipesManager {
             this.craftingRecipesArrayList.add(new GoatSpawnEggRecipe().getCraftingRecipe());
             this.craftingRecipesArrayList.add(new GuardianSpawnEggRecipe().getCraftingRecipe());
             this.craftingRecipesArrayList.add(new HoglinSpawnEggRecipe().getCraftingRecipe());
+            this.craftingRecipesArrayList.add(new HorseSpawnEggRecipe().getCraftingRecipe());
             this.craftingRecipesArrayList.add(new HuskSpawnEggRecipe().getCraftingRecipe());
             this.craftingRecipesArrayList.add(new LlamaSpawnEggRecipe().getCraftingRecipe());
             this.craftingRecipesArrayList.add(new MagmaCubeSpawnEggRecipe().getCraftingRecipe());
