@@ -20,6 +20,8 @@ package club.psychose.cimtcraft.utils;
 import club.psychose.cimtcraft.CimtCraft;
 import club.psychose.cimtcraft.core.system.managers.CraftingRecipesManager;
 import club.psychose.cimtcraft.core.system.managers.FeatureManager;
+import club.psychose.cimtcraft.core.system.managers.FileManager;
+import club.psychose.cimtcraft.core.system.managers.SettingsManager;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -47,11 +49,15 @@ public final class Constants {
      */
     public static final CraftingRecipesManager CRAFTING_RECIPES_MANAGER = new CraftingRecipesManager();
     public static final FeatureManager FEATURE_MANAGER = new FeatureManager();
+    public static final FileManager FILE_MANAGER = new FileManager();
+    public static final SettingsManager SETTINGS_MANAGER = new SettingsManager();
 
     /**
      * <p>These are the plugin constants.</p>
      */
     public static final String PREFIX = "§7[§6CimtCraft§7]: ";
+    public static final String RELEASE_INFORMATION_URL = "https://development.psychose.club/CimtCraft/assets/update.json";
+    public static boolean UPDATE_AVAILABLE = false;
 
     /**
      * <p>The method returns the folder in the plugins directory, where the plugin works.</p>
@@ -59,6 +65,6 @@ public final class Constants {
      * @return Returns the folder path.
      */
     public static Path getCimtCraftFolder (String additionalPath) {
-        return (additionalPath != null ? StringUtils.getOSPath(Paths.get(CimtCraft.getPlugin(CimtCraft.class).getDataFolder().getPath() + "\\" + additionalPath)) : StringUtils.getOSPath(Paths.get(CimtCraft.getPlugin(CimtCraft.class).getDataFolder().getPath() + "\\")));
+        return (additionalPath != null ? StringUtils.getOSPath(Paths.get(CimtCraft.getPlugin(CimtCraft.class).getDataFolder().getAbsolutePath() + "\\" + additionalPath)) : StringUtils.getOSPath(Paths.get(CimtCraft.getPlugin(CimtCraft.class).getDataFolder().getAbsolutePath() + "\\")));
     }
 }
