@@ -19,6 +19,8 @@ package club.psychose.cimtcraft;
 
 import club.psychose.cimtcraft.core.plugin.listeners.BlockBreakEventListener;
 import club.psychose.cimtcraft.core.plugin.listeners.BlockPlaceEventListener;
+import club.psychose.cimtcraft.core.plugin.listeners.PlayerJoinEventListener;
+import club.psychose.cimtcraft.core.plugin.schedulers.UpdateNotificationScheduler;
 import club.psychose.cimtcraft.utils.Constants;
 import club.psychose.cimtcraft.utils.logging.ConsoleLogger;
 import org.bukkit.Bukkit;
@@ -50,9 +52,14 @@ public final class CimtCraft extends JavaPlugin {
         Constants.CRAFTING_RECIPES_MANAGER.initializeRecipes();
         ConsoleLogger.debug("Crafting recipes initialized!");
         ConsoleLogger.printEmptyLine();
+        ConsoleLogger.debug("Loading settings...");
+        Constants.SETTINGS_MANAGER.loadFeatures();
+        ConsoleLogger.debug("Settings loaded!");
+        ConsoleLogger.printEmptyLine();
         ConsoleLogger.debug("Register listeners...");
         Bukkit.getPluginManager().registerEvents(new BlockBreakEventListener(), this);
         Bukkit.getPluginManager().registerEvents(new BlockPlaceEventListener(), this);
+        Bukkit.getPluginManager().registerEvents(new PlayerJoinEventListener(), this);
         ConsoleLogger.debug("Listeners registered!");
         ConsoleLogger.printEmptyLine();
 
@@ -65,6 +72,12 @@ public final class CimtCraft extends JavaPlugin {
         } else {
             ConsoleLogger.debug("The feature is \"Custom crafting recipes\" is disabled! To enable it, enable it in the features.json and reload the plugin!");
         }
+
+        ConsoleLogger.printEmptyLine();
+        ConsoleLogger.debug("Start schedulers...");
+        new UpdateNotificationScheduler().startScheduler();
+        ConsoleLogger.debug("Schedulers started!");
+        ConsoleLogger.printEmptyLine();
     }
 
     @Override
