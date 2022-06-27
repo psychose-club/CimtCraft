@@ -36,7 +36,7 @@ import org.bukkit.persistence.PersistentDataType;
 import java.util.Arrays;
 
 /**
- * <p>The TimberModule provides the Spawner feature for the Spigot plugin.</p>
+ * <p>The BreakSpawnersModule provides the Spawner feature for the Spigot plugin.</p>
  * @author CrashedLife
  */
 
@@ -113,9 +113,6 @@ public final class BreakSpawnersModule extends PluginFeature {
                         blockBreakEvent.getBlock().getWorld().dropItemNaturally(blockBreakEvent.getBlock().getLocation(), spawnerItemStack);
                     }
                 }
-            } else {
-                // Drops some experience.
-                blockBreakEvent.setExpToDrop(20);
             }
         }
     }

@@ -49,6 +49,8 @@ public final class SettingsManager {
                                 pluginFeature.setEnabled(featuresJsonObject.get(pluginFeature.getFeatureName()).getAsBoolean());
                         }
                     }
+
+                    this.saveFeatures();
                 } catch (IOException ioException) {
                     ConsoleLogger.debug("IOException while reading the features.json file!");
                     ioException.printStackTrace();

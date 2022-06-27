@@ -41,8 +41,8 @@ public final class Constants {
      * <p>The VERSION string represents the official labeled version from the plugin.</p>
      * <p>The BUILD string represents the build number from the plugin.</p>
      */
-    public static final String VERSION = "1.0.0";
-    public static final String BUILD = "1";
+    public static final String VERSION = "1.0.1";
+    public static final String BUILD = "2";
 
     /**
      * <p>The managers are initialized here because they can't be finalized in the main class.</p>
