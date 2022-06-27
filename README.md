@@ -7,6 +7,7 @@ CimtCraft is a Minecraft Spigot plugin which enhances the vanilla experience
 - Craftable Spawn Eggs
 - Craftable Saddle
 - Craftable Iron, Gold and Diamond Horse Armor
+- Craftable Nametag
 
 Recipes available under the images folder.
   
