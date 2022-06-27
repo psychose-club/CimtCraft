@@ -44,8 +44,9 @@ public final class FeatureManager {
 
         this.pluginFeaturesArrayList.add(new PluginFeature("Custom crafting recipes", true));
         this.pluginFeaturesArrayList.add(new PluginFeature("Craft Spawn Eggs", true));
-        this.pluginFeaturesArrayList.add(new PluginFeature("Craft Saddle", true));
         this.pluginFeaturesArrayList.add(new PluginFeature("Craft Horse Armor", true));
+        this.pluginFeaturesArrayList.add(new PluginFeature("Craft Nametag", true));
+        this.pluginFeaturesArrayList.add(new PluginFeature("Craft Saddle", true));
     }
 
     /**
